@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21d86e12b2292e84fb8e19e7657db5c4, type: 3}
-  m_Name: PropData_box
+  m_Name: PropData_Enemy_2
   m_EditorClassIdentifier: Assembly-CSharp::PropData
   propPrefab: {fileID: 2200930651223487064, guid: 36eca33e15406844888a6a62f6e0af56, type: 3}
   size: {x: 2, y: 2}
