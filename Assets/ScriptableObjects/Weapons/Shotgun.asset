@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c653cf9d61f3d43906a2a90af31cef, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  weaponName: Shotgun
+  fireRate: 1
+  bulletForce: 20
+  damage: 20
+  isAutomatic: 0
+  shootSound: {fileID: 8300000, guid: 1b34276adbc10b8418243a1862dca217, type: 3}
+  volume: 1
+  bulletsPerShot: 6
+  spreadAngle: 15
+  maxAmmo: 50
+  bulletPrefab: {fileID: 8214223798818339710, guid: a52a304d229381e4a86c5e1cdf49d869, type: 3}
+  weaponSprite: {fileID: -3305613301090283648, guid: 6915ddcfb1ec0094d94f18feed2e62ca, type: 3}
+  weaponUIIcon: {fileID: -5356358203542674464, guid: b66de16801d1b644fbde2e079d2aa9d5, type: 3}
+  firePointOffset: {x: 1.32, y: 0.15}
+  isMelee: 0
+  meleeRadius: 1

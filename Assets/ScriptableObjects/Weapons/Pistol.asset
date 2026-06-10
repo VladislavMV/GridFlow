@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c653cf9d61f3d43906a2a90af31cef, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  weaponName: 
+  fireRate: 2
+  bulletForce: 20
+  damage: 2
+  isAutomatic: 0
+  shootSound: {fileID: 8300000, guid: d5eb49222cc854440b96698ac1382b36, type: 3}
+  volume: 1
+  bulletsPerShot: 1
+  spreadAngle: 0
+  maxAmmo: 100
+  bulletPrefab: {fileID: 8214223798818339710, guid: 0630180d16f5cbd409046cf02330ddd8, type: 3}
+  weaponSprite: {fileID: -963322624, guid: ce0f30bc4c26f854ea5320b7c4cdcdf2, type: 3}
+  weaponUIIcon: {fileID: -5924257285639031068, guid: 353779ac37b60804383ea163eaa8411e, type: 3}
+  firePointOffset: {x: 0.889, y: 0.22}
+  isMelee: 0
+  meleeRadius: 1

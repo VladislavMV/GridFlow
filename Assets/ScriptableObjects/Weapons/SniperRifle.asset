@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c653cf9d61f3d43906a2a90af31cef, type: 3}
+  m_Name: SniperRifle
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  weaponName: 
+  fireRate: 2
+  bulletForce: 20
+  damage: 50
+  isAutomatic: 0
+  shootSound: {fileID: 8300000, guid: 986f98ea73ed6024992f4557ee5b81b4, type: 3}
+  volume: 1
+  bulletsPerShot: 1
+  spreadAngle: 0
+  maxAmmo: 100
+  bulletPrefab: {fileID: 8214223798818339710, guid: 05f71431c5a835c4283d6bbc7a4bc288, type: 3}
+  weaponSprite: {fileID: -1643336399387516734, guid: e384f5bc3bca21e4e90bf8fafd087c00, type: 3}
+  weaponUIIcon: {fileID: 720187975019654887, guid: 68c2e7766134165448c93aa942d2de45, type: 3}
+  firePointOffset: {x: 1.52, y: 0.2}
+  isMelee: 0
+  meleeRadius: 1

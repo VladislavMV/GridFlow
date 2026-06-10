@@ -1,0 +1,519 @@
+fileFormatVersion: 2
+guid: f43a9b6046447bb42b0190b5bb8fd489
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8553596595128423742
+    second: Torch_0
+  - first:
+      213: 330400763883709057
+    second: Torch_1
+  - first:
+      213: 6950709768184568528
+    second: Torch_2
+  - first:
+      213: 837017221450738011
+    second: Torch_3
+  - first:
+      213: 9103131428984308761
+    second: Torch_4
+  - first:
+      213: -6545210212983845557
+    second: Torch_5
+  - first:
+      213: 2483307524810053647
+    second: Torch_6
+  - first:
+      213: 2428121689872686496
+    second: Torch_7
+  - first:
+      213: -3630689362949786647
+    second: Torch_8
+  - first:
+      213: -2265761570655249421
+    second: Torch_9
+  - first:
+      213: 1743076835940916298
+    second: Torch_10
+  - first:
+      213: 8880082457101031840
+    second: Torch_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Torch_40
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.28}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fcbdddcb9ea984bb1063dd2360d5d8
+      internalID: -2004805060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torch_41
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 192
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89807b4d22a3004c916d752471c7fe8
+      internalID: -746646125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torch_42
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46993102d813534e940f2dd56eda14b
+      internalID: -997719955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torch_43
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 192
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf215133eca1a04aba20facfa7cb0ec
+      internalID: 2069868974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torch_44
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce2d69f290151a48a4752164ebd5b1a
+      internalID: 329825847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torch_45
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 192
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573fca844717da64eadc47553b5fe07f
+      internalID: -1128398704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Box_011
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 32
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e684ffe5230ca64f8a6b0aeb3b36f55
+      internalID: -239263883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_011
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7da079fc31fa514fb325252b2618a01
+      internalID: 1178164115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4e9b3a7d6b83c7e45ba5b51f1b4847b7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Barrel_011: 1178164115
+      Box_011: -239263883
+      Torch_0: -8553596595128423742
+      Torch_1: 330400763883709057
+      Torch_10: 1743076835940916298
+      Torch_100: -845889064
+      Torch_101: 697089833
+      Torch_102: -367183272
+      Torch_103: -307298518
+      Torch_104: 1107554269
+      Torch_105: -2007577671
+      Torch_106: 498003911
+      Torch_107: -1219670667
+      Torch_108: 1250002774
+      Torch_109: 1894597833
+      Torch_11: 8880082457101031840
+      Torch_110: -842246397
+      Torch_111: -1393004389
+      Torch_112: 2040129579
+      Torch_113: -1415079821
+      Torch_114: 541351148
+      Torch_115: -1431757018
+      Torch_116: -653646531
+      Torch_117: -522335802
+      Torch_118: -623035884
+      Torch_119: 719421823
+      Torch_12: -312400593
+      Torch_120: -1741928355
+      Torch_121: -1719192553
+      Torch_122: 1493746778
+      Torch_123: 1235125579
+      Torch_124: 1110437226
+      Torch_125: 2007072768
+      Torch_126: -986210522
+      Torch_127: 874675247
+      Torch_128: 1277959130
+      Torch_129: -2028095558
+      Torch_13: -1073864523
+      Torch_130: 1957482657
+      Torch_131: -2132252273
+      Torch_132: -2141336170
+      Torch_133: 2093574050
+      Torch_134: -2004037214
+      Torch_135: 1054518536
+      Torch_136: 1016921900
+      Torch_137: -623290122
+      Torch_138: -812599140
+      Torch_139: 750202888
+      Torch_14: 189263315
+      Torch_140: 553916165
+      Torch_141: 816850723
+      Torch_142: -1332146123
+      Torch_143: 1604844523
+      Torch_144: -655211754
+      Torch_145: -1145106570
+      Torch_146: 1756879036
+      Torch_147: 632792155
+      Torch_148: 1167951158
+      Torch_149: 325317490
+      Torch_15: -1728045681
+      Torch_150: -1796912161
+      Torch_151: 1488634106
+      Torch_152: -469367783
+      Torch_153: 818283264
+      Torch_154: 1309370839
+      Torch_155: 940547407
+      Torch_156: 487279421
+      Torch_157: 43069523
+      Torch_158: 1477398122
+      Torch_159: 1753622120
+      Torch_16: 674590589
+      Torch_160: -99513460
+      Torch_161: 1006876942
+      Torch_162: -1700059239
+      Torch_163: -1172801711
+      Torch_164: 1296955581
+      Torch_165: 2048769999
+      Torch_167: -1383983522
+      Torch_168: -1794385749
+      Torch_169: 269556632
+      Torch_17: -778951126
+      Torch_170: -1051236650
+      Torch_171: 580580702
+      Torch_172: 2094512053
+      Torch_173: 778689739
+      Torch_174: -323991766
+      Torch_175: 439458024
+      Torch_176: 866738214
+      Torch_177: 1257910224
+      Torch_178: -992260076
+      Torch_179: 397457423
+      Torch_18: 1658730249
+      Torch_180: 585268775
+      Torch_181: 90034946
+      Torch_182: 284255784
+      Torch_183: -1063782141
+      Torch_184: 1212873193
+      Torch_185: -581990967
+      Torch_186: -1081828768
+      Torch_19: 1594768429
+      Torch_2: 6950709768184568528
+      Torch_20: 1180094657
+      Torch_21: -797193427
+      Torch_22: 1207784120
+      Torch_23: 984417580
+      Torch_24: 660775453
+      Torch_25: 1626925140
+      Torch_26: 304428710
+      Torch_27: -1170434917
+      Torch_28: -347553617
+      Torch_29: -967940920
+      Torch_3: 837017221450738011
+      Torch_30: 1683361348
+      Torch_31: -1812254286
+      Torch_32: -1067230282
+      Torch_33: -1036967969
+      Torch_34: -1807154337
+      Torch_35: -1130064122
+      Torch_36: -2125316823
+      Torch_37: 1408807154
+      Torch_38: -535615171
+      Torch_39: 853766192
+      Torch_4: 9103131428984308761
+      Torch_40: -2004805060
+      Torch_41: -746646125
+      Torch_42: -997719955
+      Torch_43: 2069868974
+      Torch_44: 329825847
+      Torch_45: -1128398704
+      Torch_46: -1080378726
+      Torch_47: -2083345090
+      Torch_48: -1109012189
+      Torch_49: 681262824
+      Torch_5: -6545210212983845557
+      Torch_50: -1082677913
+      Torch_51: -1409229403
+      Torch_52: -1584882006
+      Torch_53: 974526873
+      Torch_54: -504523139
+      Torch_55: 675188156
+      Torch_56: 1265964374
+      Torch_57: -187878219
+      Torch_58: 609161169
+      Torch_59: 1654317564
+      Torch_6: 2483307524810053647
+      Torch_60: -1302399608
+      Torch_61: 2077502741
+      Torch_62: -770966879
+      Torch_63: -37525627
+      Torch_64: 1642988539
+      Torch_65: 117551989
+      Torch_66: 910051839
+      Torch_67: -1883650469
+      Torch_68: -1717986903
+      Torch_69: 1484775505
+      Torch_7: 2428121689872686496
+      Torch_70: -1479762018
+      Torch_71: 498762398
+      Torch_72: 166027597
+      Torch_73: -1127523609
+      Torch_74: -1512847086
+      Torch_75: 1227724608
+      Torch_76: 2009698062
+      Torch_77: -1265076347
+      Torch_78: 1330592495
+      Torch_79: 1158685877
+      Torch_8: -3630689362949786647
+      Torch_80: 1520718410
+      Torch_81: 1635629171
+      Torch_82: -1759038295
+      Torch_83: 1596611485
+      Torch_84: -1729847612
+      Torch_85: -1953083819
+      Torch_86: -967496073
+      Torch_87: 1580519977
+      Torch_88: 1771979930
+      Torch_89: -1273224825
+      Torch_9: -2265761570655249421
+      Torch_90: -1611418039
+      Torch_91: 660594698
+      Torch_92: 2004519234
+      Torch_93: -834528624
+      Torch_94: -1913479319
+      Torch_95: -702244411
+      Torch_96: -34493561
+      Torch_97: 2141400183
+      Torch_98: -680565883
+      Torch_99: -331132298
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
