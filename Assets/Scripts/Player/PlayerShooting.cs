@@ -44,6 +44,9 @@ public class PlayerShooting : MonoBehaviour
     private void Update()
     {
         if (isDead) return;
+
+        if (Time.timeScale == 0f) return;
+
         HandleRotation();
         HandleWeaponSwitch();
         HandleShooting();

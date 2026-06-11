@@ -31,6 +31,10 @@ public class UIManager : MonoBehaviour
     [Header("Timer UI")]
     public TextMeshProUGUI timerText;
 
+    [Header("Score UI")]
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI finalScoreText;
+
     private float elapsedTime;
     private bool isTimerRunning = true;
     private bool isPaused = false;
@@ -49,6 +53,17 @@ public class UIManager : MonoBehaviour
         if (healthSlider != null)
         {
             targetHealthValue = healthSlider.value;
+        }
+
+        if (GameDataManager.Instance != null)
+        {
+            elapsedTime = GameDataManager.Instance.savedTimer;
+            UpdateTimerDisplay();
+        }
+
+        if (GameDataManager.Instance != null)
+        {
+            UpdateScoreDisplay(GameDataManager.Instance.currentScore);
         }
     }
 
@@ -70,6 +85,11 @@ public class UIManager : MonoBehaviour
         {
             healthSlider.value = Mathf.Lerp(healthSlider.value, targetHealthValue, Time.deltaTime * smoothSpeed);
         }
+    }
+
+    public float GetElapsedTime()
+    {
+        return elapsedTime;
     }
 
     public void PauseGame()
@@ -108,11 +128,35 @@ public class UIManager : MonoBehaviour
 
     public void ShowGameOverScreen()
     {
-        if (gameOverPanel != null) gameOverPanel.SetActive(true);
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
+
+        if (finalScoreText != null)
+        {
+            finalScoreText.text = "Фінальний рахунок: " + GameDataManager.Instance.currentScore.ToString();
+        }
+    }
+
+    public void UpdateScoreDisplay(int score)
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score.ToString();
+        }
     }
 
     public void RestartGame()
     {
+        if (GameDataManager.Instance != null)
+        {
+            GameDataManager.Instance.ResetData();
+        }
+
+        Time.timeScale = 1f;
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

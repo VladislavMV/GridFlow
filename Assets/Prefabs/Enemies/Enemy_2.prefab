@@ -106,6 +106,8 @@ GameObject:
   - component: {fileID: 1430821126191052235}
   - component: {fileID: 603293411081885697}
   - component: {fileID: 4795364177409123422}
+  - component: {fileID: 3174924182500308363}
+  - component: {fileID: 5640144670874502543}
   m_Layer: 6
   m_Name: Enemy_2
   m_TagString: Enemy
@@ -156,7 +158,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ae6c685a11a027246a0e8f4e30fbd7f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -289,6 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
   healthPerFloor: 20
+  destructionEffectPrefab: {fileID: 0}
 --- !u!114 &4795364177409123422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +315,34 @@ MonoBehaviour:
   fireRate: 1
   bulletsPerShot: 1
   spreadAngle: 0
+--- !u!114 &3174924182500308363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200930651223487064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb607038f33078948aa3a0c73640777e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageFlash
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.1
+  useShaderFlash: 1
+--- !u!114 &5640144670874502543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200930651223487064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a247424216c8f8c448dc8fc8ddf4a208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyReward
+  scoreValue: 120
 --- !u!1 &4013710646184307761
 GameObject:
   m_ObjectHideFlags: 0

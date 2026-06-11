@@ -128,7 +128,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0033683777, y: -0.2891407}
+  m_Offset: {x: -0.00020217896, y: 0.30486012}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -138,7 +138,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.85878754, y: 0.17964554}
+  m_Size: {x: 0.87145233, y: 0.6391926}
   m_EdgeRadius: 0
 --- !u!61 &4324692981654997154
 BoxCollider2D:
@@ -174,7 +174,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.06576538}
+  m_Offset: {x: 0.0000019073486, y: 0.38513947}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -184,7 +184,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8733368, y: 0.6248932}
+  m_Size: {x: 1.1388817, y: 0.997406}
   m_EdgeRadius: 0
 --- !u!114 &6551974280221664307
 MonoBehaviour:
@@ -201,5 +201,7 @@ MonoBehaviour:
   weaponPickups:
   - {fileID: 6324435472167295073, guid: 8847649c28c7ec845b16112d305f24ff, type: 3}
   - {fileID: 9214612318218554497, guid: bba9b79df9d0f1e448e3396d523ccaa0, type: 3}
+  - {fileID: 1989967493542467169, guid: 1a40a9893e8c5104e9a5a25b58b661ab, type: 3}
   ammoPickupPrefab: {fileID: 5219584555254017148, guid: e3a1e5b9f7570df49994d6ab45969789, type: 3}
-  potionPickupPrefab: {fileID: 5219584555254017148, guid: e3a1e5b9f7570df49994d6ab45969789, type: 3}
+  potionPickupPrefab: {fileID: 1212663795228393200, guid: d229bacb5137bf94583dcad31afe3aa4, type: 3}
+  openedChestSprite: {fileID: -355447122, guid: 71f96d6059a5fb749b587bc4dc9ef5b3, type: 3}

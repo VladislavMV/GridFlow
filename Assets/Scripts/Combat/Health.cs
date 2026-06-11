@@ -7,12 +7,17 @@ public class Health : MonoBehaviour
     [Tooltip("На скільки збільшувати HP ворогів за кожен поверх")]
     [SerializeField] private int healthPerFloor = 20;
 
+    [Header("Visual Effects")]
+    [SerializeField] private GameObject destructionEffectPrefab;
+
     private int currentHealth;
     private int currentMaxHealth;
     private Animator anim;
     private bool isDead = false;
+    private DamageFlash damageFlash;
 
     public int CurrentHealth => currentHealth;
+    public int CurrentMaxHealth => currentMaxHealth;
 
     private void Start()
     {
@@ -22,11 +27,13 @@ public class Health : MonoBehaviour
         int floor = 1;
         if (GameDataManager.Instance != null) floor = GameDataManager.Instance.currentFloor;
 
+        damageFlash = GetComponent<DamageFlash>();
+
         if (CompareTag("Player"))
         {
             currentMaxHealth = maxHealth;
             if (currentHealth <= 0) currentHealth = currentMaxHealth;
-            UIManager.Instance.UpdateHealth(currentHealth, currentMaxHealth);
+            if (UIManager.Instance != null) UIManager.Instance.UpdateHealth(currentHealth, currentMaxHealth);
         }
         else if (CompareTag("Prop"))
         {
@@ -45,9 +52,9 @@ public class Health : MonoBehaviour
         currentHealth = healthAmount;
         if (currentHealth <= 0) currentHealth = 1;
 
-        if (CompareTag("Player"))
+        if (CompareTag("Player") && UIManager.Instance != null)
         {
-            UIManager.Instance.UpdateHealth(currentHealth, maxHealth);
+            UIManager.Instance.UpdateHealth(currentHealth, currentMaxHealth);
         }
     }
 
@@ -57,9 +64,20 @@ public class Health : MonoBehaviour
 
         currentHealth -= damage;
 
-        if (CompareTag("Player"))
+        if (currentHealth < 0) currentHealth = 0;
+
+        if (damageFlash != null) damageFlash.PlayFlash();
+
+        if (AudioManager.Instance != null)
         {
-            UIManager.Instance.UpdateHealth(currentHealth, maxHealth);
+            if (CompareTag("Player")) AudioManager.Instance.PlaySFX("Hit_Player");
+            else if (CompareTag("Enemy")) AudioManager.Instance.PlaySFX("Hit_Enemy");
+            else if (CompareTag("Prop")) AudioManager.Instance.PlaySFX("Hit_Prop");
+        }
+
+        if (CompareTag("Player") && UIManager.Instance != null)
+        {
+            UIManager.Instance.UpdateHealth(currentHealth, currentMaxHealth);
         }
 
         if (currentHealth <= 0)
@@ -73,9 +91,9 @@ public class Health : MonoBehaviour
         currentHealth += amount;
         if (currentHealth > currentMaxHealth) currentHealth = currentMaxHealth;
 
-        if (CompareTag("Player"))
+        if (CompareTag("Player") && UIManager.Instance != null)
         {
-            UIManager.Instance.UpdateHealth(currentHealth, maxHealth);
+            UIManager.Instance.UpdateHealth(currentHealth, currentMaxHealth);
         }
     }
 
@@ -84,14 +102,31 @@ public class Health : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
-        if (CompareTag("Prop"))
+        if (destructionEffectPrefab != null)
+        {
+            Instantiate(destructionEffectPrefab, transform.position, Quaternion.identity);
+        }
+
+        if (CompareTag("Enemy"))
+        {
+            if (TryGetComponent<EnemyReward>(out EnemyReward reward))
+            {
+                if (GameDataManager.Instance != null)
+                {
+                    GameDataManager.Instance.AddScore(reward.ScoreValue);
+                }
+            }
+        }
+
+            if (CompareTag("Prop"))
         {
             if (anim != null) anim.SetTrigger("Destroy");
 
-            AudioManager.Instance.PlaySFX("PropDestroy");
+            if (AudioManager.Instance != null) AudioManager.Instance.PlaySFX("Destroy_Prop");
+
             DisableComponents();
 
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject);
             return;
         }
 
@@ -122,7 +157,7 @@ public class Health : MonoBehaviour
         }
         else
         {
-            UIManager.Instance.StopTimer();
+            if (UIManager.Instance != null) UIManager.Instance.StopTimer();
             Invoke(nameof(TriggerGameOverUI), 1.5f);
         }
     }
@@ -142,6 +177,6 @@ public class Health : MonoBehaviour
 
     private void TriggerGameOverUI()
     {
-        UIManager.Instance.ShowGameOverScreen();
+        if (UIManager.Instance != null) UIManager.Instance.ShowGameOverScreen();
     }
 }

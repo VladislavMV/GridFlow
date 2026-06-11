@@ -13,6 +13,9 @@ public class AmmoPickup : MonoBehaviour
             if (shooting != null)
             {
                 shooting.AddAmmo(ammoAmount);
+
+                if (AudioManager.Instance != null) AudioManager.Instance.PlaySFX("Pickup_ammo");
+
                 Destroy(gameObject);
             }
         }

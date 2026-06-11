@@ -14,6 +14,12 @@ public class GameDataManager : MonoBehaviour
     public int savedActiveIndex = 0;
     public bool hasSavedInventory = false;
 
+    [Header("Timer Save")]
+    public float savedTimer = 0f;
+
+    [Header("Score")]
+    public int currentScore = 0;
+
     private void Awake()
     {
         if (Instance == null)
@@ -31,6 +37,11 @@ public class GameDataManager : MonoBehaviour
     {
         currentHealth = playerHealth.CurrentHealth;
         currentFloor++;
+
+        if (UIManager.Instance != null)
+        {
+            savedTimer = UIManager.Instance.GetElapsedTime();
+        }
 
         if (playerShooting != null)
         {
@@ -50,6 +61,31 @@ public class GameDataManager : MonoBehaviour
                     savedWeaponNames[i] = "";
                 }
             }
+        }
+    }
+
+    public void AddScore(int amount)
+    {
+        currentScore += amount;
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.UpdateScoreDisplay(currentScore);
+        }
+    }
+
+    public void ResetData()
+    {
+        currentFloor = 1;
+        currentHealth = 0;
+        savedTimer = 0f;
+        currentScore = 0;
+        hasSavedInventory = false;
+        savedActiveIndex = 0;
+
+        for (int i = 0; i < savedWeaponNames.Length; i++)
+        {
+            savedWeaponNames[i] = "";
+            savedAmmo[i] = 0;
         }
     }
 }

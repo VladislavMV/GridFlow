@@ -16,6 +16,8 @@ public class EnemyAI : MonoBehaviour
     private Animator animator;
     private float nextAttackTime = 0f;
 
+    private bool isAttacking = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,10 +26,21 @@ public class EnemyAI : MonoBehaviour
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null) player = playerObj.transform;
     }
+    private void ResetAttack()
+    {
+        isAttacking = false;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
 
     private void FixedUpdate()
     {
         if (player == null)
+        {
+            SetMoving(false);
+            return;
+        }
+
+        if (isAttacking)
         {
             SetMoving(false);
             return;
@@ -61,13 +74,10 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackPlayer()
     {
-        if (animator != null) animator.SetTrigger("Attack");
-
-        Health playerHealth = player.GetComponent<Health>();
-        if (playerHealth != null)
-        {
-            playerHealth.TakeDamage(attackDamage);
-        }
+        isAttacking = true;
+        animator.SetTrigger("Attack");
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        Invoke("ResetAttack", 1f / attackRate);
     }
 
     private void SetMoving(bool moving)
@@ -76,6 +86,23 @@ public class EnemyAI : MonoBehaviour
         {
             animator.SetBool("isMoving", moving);
         }
+    }
+
+    public void DealDamage()
+    {
+        if (player != null && Vector2.Distance(transform.position, player.position) <= attackRange)
+        {
+            Health playerHealth = player.GetComponent<Health>();
+            if (playerHealth != null) playerHealth.TakeDamage(attackDamage);
+        }
+    }
+
+    private void OnDisable()
+    {
+        CancelInvoke();
+        isAttacking = false;
+
+        if (rb != null) rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     private void OnDrawGizmosSelected()

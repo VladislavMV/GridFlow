@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 8282956227151588927}
   - component: {fileID: 4972116932226779426}
   - component: {fileID: 2179246578725744289}
+  - component: {fileID: 394941426410892101}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -378,6 +379,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
   healthPerFloor: 20
+--- !u!114 &394941426410892101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199073604587403024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb607038f33078948aa3a0c73640777e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageFlash
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
+  flashDuration: 0.1
+  useShaderFlash: 0
 --- !u!1 &8938875713780007168
 GameObject:
   m_ObjectHideFlags: 0

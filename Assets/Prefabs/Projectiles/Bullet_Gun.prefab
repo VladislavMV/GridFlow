@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -409870493
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5639141422498800478, guid: cd72e1b68c4c1ec49b95e4fa7b680d89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -155,8 +155,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.68520737, y: 0.0028743744}
-  m_Radius: 0.15149307
+  m_Offset: {x: 0.701416, y: -0.00007200241}
+  m_Radius: 0.12055969
 --- !u!114 &3010325231143692268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,3 +170,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   damage: 20
+  impactEffectPrefab: {fileID: 5030501838273122962, guid: 8a61e830b68bdfc4b8a3559e84c778cb, type: 3}

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HealthPotion : MonoBehaviour
+public class MedkitPickup : MonoBehaviour
 {
     [SerializeField] private int healAmount = 25;
 
@@ -12,6 +12,9 @@ public class HealthPotion : MonoBehaviour
             if (playerHealth != null)
             {
                 playerHealth.Heal(healAmount);
+
+                if (AudioManager.Instance != null) AudioManager.Instance.PlaySFX("Pickup_medkit");
+
                 Destroy(gameObject);
             }
         }

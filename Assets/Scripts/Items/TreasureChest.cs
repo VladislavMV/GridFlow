@@ -7,8 +7,17 @@ public class TreasureChest : MonoBehaviour
     [SerializeField] private GameObject ammoPickupPrefab;
     [SerializeField] private GameObject potionPickupPrefab;
 
+    [Header("Visual Settings")]
+    [SerializeField] private Sprite openedChestSprite;
+
     private bool isOpened = false;
     private bool playerInRange = false;
+    private SpriteRenderer spriteRenderer;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     private void Update()
     {
@@ -21,12 +30,18 @@ public class TreasureChest : MonoBehaviour
     private void OpenChest()
     {
         isOpened = true;
-        GetComponent<SpriteRenderer>().color = Color.gray;
+
+        if (spriteRenderer != null && openedChestSprite != null)
+        {
+            spriteRenderer.sprite = openedChestSprite;
+        }
+
+        if (GameDataManager.Instance != null) GameDataManager.Instance.AddScore(250);
 
         int lootScenario = Random.Range(0, 3);
 
-        Vector3 leftPos = transform.position + new Vector3(-0.7f, -1f, 0);
-        Vector3 rightPos = transform.position + new Vector3(0.7f, -1f, 0);
+        Vector3 leftPos = transform.position + new Vector3(-1f, -0.8f, 0);
+        Vector3 rightPos = transform.position + new Vector3(1f, -0.8f, 0);
 
         GameObject randomWeapon = weaponPickups[Random.Range(0, weaponPickups.Length)];
 

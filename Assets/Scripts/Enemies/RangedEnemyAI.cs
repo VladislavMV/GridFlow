@@ -89,6 +89,11 @@ public class RangedEnemyAI : MonoBehaviour
 
     private void Shoot(Vector2 direction)
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Enemy_Shoot");
+        }
+
         float baseAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         for (int i = 0; i < bulletsPerShot; i++)
